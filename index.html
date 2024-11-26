@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dove Pharma</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="dove.css">
+    <style>
+        .product {
+            display: flex;
+            flex-direction: column;
+            max-width: 350px;
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .product:hover {
+            transform: translateY(-10px);
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 2px solid #ddd;
+        }
+        
+        .product-info {
+            padding: 20px;
+        }
+        
+        .product-title {
+            font-size: 1.6em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .product-description {
+            font-size: 1em;
+            color: #777;
+            margin-bottom: 15px;
+        }
+        
+        .price, .discount, .total {
+            font-size: 1.2em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .price-value, .total-value {
+            font-weight: bold;
+            color: #007bff;
+        }
+        
+        .buy-button {
+            width: 100%;
+            padding: 12px;
+            font-size: 1.1em;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .buy-button:hover {
+            background-color: #0056b3;
+        }
+        
+        @media (max-width: 768px) {
+            .product {
+                max-width: 100%;
+            }
+        
+            .product-image {
+                height: 180px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .product-title {
+                font-size: 1.4em;
+            }
+        
+            .price, .discount, .total {
+                font-size: 1em;
+            }
+        
+            .buy-button {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header id="hader">
+        <div class="main-navbar">
+            <div class="logo"></div>
+            <div class="logoname">
+                <p>Dove Pharma</p>
+            </div>
+            <div class="address">
+                <div class="deliver">Deliver to</div>
+                <div class="india"> <i class="fa-solid fa-location-dot"></i> India</div>
+            </div>
+            <div class="addres"> </div>
+            <div class="navsearch">
+                <select name="all" class="searchall">
+                    <option> All</option>
+                </select>
+                <div class="search"> <input class="searchinput" type="text" placeholder="search iteam"> </div>
+                <div class="iconsearch"><i class="fa-solid fa-magnifying-glass"></i></div>
+            </div>
+            <div class="nav-signin">
+                <p><span class="sign1">Hello, Sign in</span></p>
+                <p class="sign2"> <b>Account & List</b></p>
+
+            </div>
+            <div class="returnorder ">
+                <p><span class="return">Return</span></p>
+                <p class="order"> <b>& Order</b></p>
+
+            </div>
+            <div class="cart"><i class="fa-solid fa-cart-plus"></i>
+                <div class="cal">
+                    <select name="" id="">
+                        <option value="">
+
+                        </option>
+                    </select>
+                </div>
+
+            </div>
+        </div>
+        <div class="main-panal">
+            <div class="panal-all">
+                <i class="fa-solid fa-bars"></i> All
+            </div>
+            <div class="panal-ops">
+                <p class="ops">Today Deals </p>
+                <p class="ops">Customer Service </p>
+                <p class="ops">Registry</p>
+                <p class="ops">Gift Cards </p>
+                <p class="ops">Sell </p>
+            </div>
+            <div class="panal-deal">
+                Shop deals in Electronics
+            </div>
+        </div>
+        <div l̥ō><img class="inng" src="mainbg.jpg" alt=""></div>
+    </header>
+    <div class="hero-section">
+        <div class="hero-text">You Are On dove pharma.in you cal also visit dove pharma.in milions of product fast
+            deliver &nbsp;<a href="click">click here to dovepharma.in</a></div>
+    </div>
+    <div class="shop-box">
+
+        <div class="product">
+            <img class="i1" src="l.jpg" alt="">
+
+            <h2 class="product-title">Allegra </h2>
+            <p class="product-description">This is a great product.</p>
+            <p>Price: <span id="price">Rs. 300.00</span></p>
+            <p>Discount: 10%</p>
+            <p>Total: <span id="total">Rs. 270.00</span></p>
+            <button id="buy-button">Buy</button>
+        </div>
+
+        <div class="product">
+            <img class="i1" src="k.jpg" alt="">
+            <h2 class="product-title">Yasmin </h2>
+            <p class="product-description">This is a great product.</p>
+            <p>Price: <span id="price">Rs. 400.00</span></p>
+            <p>Discount: 10%</p>
+            <p>Total: <span id="total">Rs. 360.00</span></p>
+            <button id="buy-button">Buy</button>
+        </div>
+
+        <div class="product">
+            <img class="i1" src="a.jpg" alt="">
+            <h2 class="product-title">Lupimox 500mg</h2>
+            <p class="product-description">This is a great product.</p>
+            <p>Price: <span id="price">Rs. 200.00</span></p>
+            <p>Discount: 10%</p>
+            <p>Total: <span id="total">Rs. 180.00</span></p>
+            <button id="buy-button">Buy</button>
+        </div>
+
+        <div class="product">
+            <img class="i1" src="b.jpg" alt="">
+            <h2 class="product-title">Calora af </h2>
+            <p class="product-description">This is a great product.</p>
+            <p>Price: <span id="price">Rs. 500.00</span></p>
+            <p>Discount: 10%</p>
+            <p>Total: <span id="total">Rs. 450.00</span></p>
+            <button id="buy-button">Buy</button>
+        </div>
+    
+
+        <div class="product">
+            <img class="i1" src="c.jpg" alt="">
+            <h2 class="product-title">LupImox </h2>
+            <p class="product-description">This is a great product.</p>
+            <p>Price: <span id="price">Rs. 150.00</span></p>
+            <p>Discount: 10%</p>
+            <p>Total: <span id="total">Rs. 125.00</span></p>
+            <button id="buy-button">Buy</button>
+        </div>
+
+        <div class="product">
+            <img class="i1" src="d.jpg" alt="">
+            <h2 class="product-title">Aptamil</h2>
+            <p class="product-description">This is a great product.</p>
+            <p>Price: <span id="price">Rs. 450.00</span></p>
+            <p>Discount: 10%</p>
+            <p>Total: <span id="total">Rs. 405.00</span></p>
+            <button id="buy-button">Buy</button>
+        </div>
+        <div class="product">
+            <img class="i1" src="e.jpg" alt="">
+            <h2 class="product-title">Cipmox 500mg </h2>
+            <p class="product-description">This is a great product.</p>
+            <p>Price: <span id="price">Rs. 500.00</span></p>
+            <p>Discount: 10%</p>
+            <p>Total: <span id="total">Rs. 450.00</span></p>
+            <button id="buy-button">Buy</button>
+        </div>
+        <div class="product">
+            <img class="i1" src="f.jpg" alt="">
+            <h2 class="product-title">Novamox 500mg </h2>
+            <p class="product-description">This is a great product.</p>
+            <p>Price: <span id="price">Rs. 200.00</span></p>
+            <p>Discount: 10%</p>
+            <p>Total: <span id="total">Rs. 180.00</span></p>
+            <button id="buy-button">Buy</button>
+        </div>
+        <div class="product">
+            <img class="i1" src="g.jpg" alt="">
+            <h2 class="product-title">Lupimox Capsule 500mg </h2>
+            <p class="product-description">This is a great product.</p>
+            <p>Price: <span id="price">Rs. 350.00</span></p>
+            <p>Discount: 10%</p>
+            <p>Total: <span id="total">Rs. 315.00</span></p>
+            <button id="buy-button">Buy</button>
+        </div>
+
+
+
+    </div>
+    <footer>
+        <pre>
+
+
+            
+            Copyright &copy; All Right reserved
+             Contact-XXXXXXXX87 
+        </pre>
+    </footer>
+    <script src="dove.js"></script>
+</body>
+
+</html>
